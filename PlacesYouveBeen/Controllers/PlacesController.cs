@@ -20,9 +20,9 @@ namespace PlacesYouveBeen.Controllers
     }
 
     [HttpPost("/places")]
-    public ActionResult Create(string cityName, string visitDate, string travelPartners, string journalEntry)
+    public ActionResult Create(string cityName, string visitDate, string endDate, string travelPartners, string journalEntry)
     {
-      Place myPlace = new Place(cityName, visitDate, travelPartners, journalEntry); //this variable MUST match variable for New.cshtml -- add parameters for each new field
+      Place myPlace = new Place(cityName, visitDate, endDate, travelPartners, journalEntry); //this variable MUST match variable for New.cshtml -- add parameters for each new field
       return RedirectToAction("Index");
     }
 
