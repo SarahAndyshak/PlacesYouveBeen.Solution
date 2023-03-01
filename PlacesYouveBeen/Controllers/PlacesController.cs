@@ -20,10 +20,11 @@ namespace PlacesYouveBeen.Controllers
     }
 
     [HttpPost("/places")]
-    public ActionResult Create(string cityName)
+    public ActionResult Create(string cityName, string visitDate)
     {
-      Place myPlace = new Place(cityName);
+      Place myPlace = new Place(cityName, visitDate); //this variable MUST match variable for New.cshtml
       return RedirectToAction("Index");
+      //maybe add more parameters for description etc?
     }
 
     [HttpPost("/places/delete")]
@@ -33,11 +34,11 @@ namespace PlacesYouveBeen.Controllers
       return View();
     }
 
-    [HttpGet("places/{id}")]
+    [HttpGet("/places/{id}")]
     public ActionResult Show(int id)
     {
       Place foundPlace = Place.Find(id);
-      return View(foundItem);
+      return View(foundPlace);
     }
   }
 }
