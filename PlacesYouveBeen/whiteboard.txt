@@ -1,0 +1,7 @@
+WE HAVE LEARNED!!!
+- Variable names must be the same in all locations. Check public, private variables.
+- To update/add entry boxes:
+    add form entry to New.cshtml, 
+    add variables to Place.cs -- public string and to constructor
+    add line to Show.cshtml with Dynamic razor to get new variable info
+    update PlacesController.cs to add new variables in Create() (line 23)

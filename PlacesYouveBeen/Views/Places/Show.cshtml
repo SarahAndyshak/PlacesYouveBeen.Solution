@@ -13,7 +13,11 @@
     <h1>Travel Diary Details: </h1>
 
     <h2>@Model.CityName</h2>
-    <p>Date of visit: @Model.VisitDate</p>
+    <ul>
+    <li><strong>Date of visit: </strong>@Model.VisitDate</li>
+    <li><strong>Your travel partners were: </strong>@Model.TravelPartners</li>
+    <li><strong>Trip highlights: </strong>@Model.JournalEntry</li>
+    </ul>
 
     <a href='/places/new'>Add another place</a>
     <a href='/places'>View all places</a>
